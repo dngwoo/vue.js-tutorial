@@ -15,6 +15,7 @@
 
 command + option = inspector
 command + \ = 패널 토글 창 열기
+command + k = 콘솔창 clear
 
 ## 개념 정리
 

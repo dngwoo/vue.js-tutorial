@@ -11,16 +11,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
+      // 객체 리터럴로 넣어주는게 좀 더 가독성에 좋다.
       var vm = new Vue({
-        // element에 div태그를 지정해주고 그 태그에 이 인스턴스를 붙이겠다라는 의미이다.
-        // 붙여줘야 app이라는 div안에서 동작할 수 있다.
         el: "#app",
         data: {
           message: "hi",
         },
+        methods: {},
       });
-      // vm을 쳐보면 함수들과 속성들이 나오게 된다.
-      // 함수들은 API라고 부른다. 기능을 뜻한다.
     </script>
   </body>
 </html>
