@@ -11,12 +11,10 @@
       <!-- 하위 or 자식 컴포넌트 -->
       <app-header></app-header>
       <app-content></app-content>
+      <app-footer></app-footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-      // Vue.component("컴포넌트이름", 컴포넌트내용);
-      // Root 컴포넌트안에 컴포넌트를 정의하기 위해서 사용된다.
-      // Vue.component()를 사용하는데 여기서 Vue는 전역 컴포넌트라고 한다.
       Vue.component("app-header", {
         template: "<h1>Header</h1>",
       });
@@ -25,9 +23,14 @@
         template: "<h1>Content</h1>",
       });
 
-      // 인스턴스를 생성하면 Root 컴포넌트가 된다.
+      // 지역 컴포넌트 등록 방식
       new Vue({
         el: "#app",
+        components: {
+          "app-footer": {
+            template: "<footer>Footer</footer>",
+          },
+        },
       });
     </script>
   </body>
