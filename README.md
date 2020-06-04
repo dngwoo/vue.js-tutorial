@@ -35,4 +35,5 @@ Vue란?
 - [x] 인스턴스 (생성자)
 - [x] 컴포넌트 종류 (루트, 전역, 지역 컴포넌트)
 - [x] 컴포넌트 통신 방식 (props, emit)
-- [ ] 뷰 라우터(뷰 라이브러리를 이용하여 SPA을 구현할 때 사용하는 라이브러리, routes, router-view)
+- [x] 뷰 라우터(페이지 이동을 위한 뷰 공식 라이브러리, routes, router-view, router-link)
+- [ ] axios
