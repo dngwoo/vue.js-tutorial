@@ -6,7 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <!-- router-view라는 것은 Vue 인스턴스에 router 인스턴스를 "연결"해야지만 사용가능한 태그 -->
+      <router-view></router-view>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script>
@@ -29,13 +32,13 @@
           },
           {
             path: "/main",
-            componrnt: MainComponent,
+            component: MainComponent,
           },
         ],
       });
 
       new Vue({
-        el: "#app",
+        el: "#app", // #app에 인스턴스를 정의했다고 표현한다.
         router: router, // router는 vue가 만들어 놓은 속성임. 뒤의 router는 위에 만들어놓은 router임
       });
     </script>
