@@ -9,10 +9,22 @@
     <div id="app">
       <!-- v-bind 라는 뷰 디렉티브를 사용하면 인스턴스의 data에 있는 속성과 연결가능하다 -->
       <!-- 여기서 알 수 있는 뷰의 역할은 DOM의 대한 정보를 Text 뿐만 아니라 다른 것들도 조작할 수 있는 것이다 -->
-      <p v-bind:id="uuid">
+      <!-- <p v-bind:id="uuid">
         {{num}}
       </p>
-      <p v-bind:class="name">{{doubleNum}}</p>
+      <p v-bind:class="name">{{doubleNum}}</p> -->
+
+      <!-- if, else 같은 경우는 DOM에서 아예 없애버린다 -->
+      <div v-if="loading">
+        Loading...
+      </div>
+      <div v-else>
+        test user has been logged in
+      </div>
+      <!-- display:none; 형태로 만든다 -->
+      <div v-show="loading">
+        Loading...
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -22,6 +34,7 @@
           num: 10,
           uuid: "abcd1234",
           name: "text-blue",
+          loading: true,
         },
         // 계산된 속성
         computed: {
