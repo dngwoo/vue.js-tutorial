@@ -36,4 +36,5 @@ Vue란?
 - [x] 컴포넌트 종류 (루트, 전역, 지역 컴포넌트)
 - [x] 컴포넌트 통신 방식 (props, emit)
 - [x] 뷰 라우터(페이지 이동을 위한 뷰 공식 라이브러리, routes, router-view, router-link)
-- [ ] axios
+- [x] axios (axios 사용방법, http 통신, 네트워크 패널 보는 법)
+- [ ] 템플릿 문법(데이터 바인딩 - Mushtache Tag(콧수염 괄호), 뷰 디렉티브 - v- 가 붙는 속성들)
