@@ -7,6 +7,11 @@
   </head>
   <body>
     <div id="app">
+      <div>
+        <!-- router-link는 achor(앵커) 태그로 바껴서 나온다. -->
+        <router-link to="/login">Login</router-link>
+        <router-link to="/main">Main</router-link>
+      </div>
       <!-- router-view라는 것은 Vue 인스턴스에 router 인스턴스를 "연결"해야지만 사용가능한 태그 -->
       <router-view></router-view>
     </div>
