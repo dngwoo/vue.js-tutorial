@@ -8,12 +8,20 @@
   <body>
     <div id="app">
       <!-- <app-header v-bind: "프롭스 속성 이름" = "상위 컴포넌트의 데이터 이름"></app-header> -->
-      <app-header v-bind: propsdata="message"></app-header>
+      <app-header v-bind:propsdata="message"></app-header>
+      <app-content v-bind:propsdata="number"></app-content>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
+      // propsdata를 똑같이 props 속성 이름으로 해줘도 알아서 구분 해준다.
+      // data.message나 data.number을 바꿔주면 화면에서 즉시 바뀌게 된다. (Reactivity - 반응성)
       var appHeader = {
-        template: "<h1>header</h1>",
+        template: "<h1>{{propsdata}}</h1>",
+        props: ["propsdata"],
+      };
+
+      var appContent = {
+        template: "<div>{{propsdata}}</div>",
         props: ["propsdata"],
       };
 
@@ -21,9 +29,11 @@
         el: "#app",
         components: {
           "app-header": appHeader,
+          "app-content": appContent,
         },
         data: {
           message: "hi",
+          number: 10,
         },
       });
     </script>
