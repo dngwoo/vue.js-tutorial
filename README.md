@@ -16,6 +16,7 @@
 command + option = inspector
 command + \ = 패널 토글 창 열기
 command + k = 콘솔창 clear
+control + ~ = terminal
 
 ## 개념 정리
 
@@ -39,3 +40,4 @@ Vue란?
 - [x] axios (axios 사용방법, http 통신, 네트워크 패널 보는 법)
 - [x] 템플릿 문법(뷰로 화면을 조작하는 방법을 의미 - 데이터바인딩, 디렉티브)
 - [x] 뷰 인스턴스의 watch, computed 속성
+- [ ] vue-cli(command line interface - 명령어를 통한 특정 액션을 수행하는 도구, 명령어 실행 도구)
