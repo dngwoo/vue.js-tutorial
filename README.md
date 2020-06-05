@@ -38,4 +38,4 @@ Vue란?
 - [x] 뷰 라우터(페이지 이동을 위한 뷰 공식 라이브러리, routes, router-view, router-link)
 - [x] axios (axios 사용방법, http 통신, 네트워크 패널 보는 법)
 - [x] 템플릿 문법(뷰로 화면을 조작하는 방법을 의미 - 데이터바인딩, 디렉티브)
-- [ ] 뷰 인스턴스의 watch, computed 속성
+- [x] 뷰 인스턴스의 watch, computed 속성
