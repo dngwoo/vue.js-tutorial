@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <p>{{num}}</p>
+      <button v-on:click="addNum">increase</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          num: 10,
+        },
+        watch: {
+          // 뷰 인스턴스의 data의 속성들을 넣을 수 있고 그 속성들의 값들이 변화가 있으면 특정 로직을 실행시킬 수 있음
+          num: function () {
+            this.logText();
+          },
+        },
+        methods: {
+          addNum: function () {
+            this.num = this.num + 1;
+          },
+          logText: function () {
+            console.log("changed");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

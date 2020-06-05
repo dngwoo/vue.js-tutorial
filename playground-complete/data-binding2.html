@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- TODO : 인풋 박스를 만들고 입력된 값을 p 태그에 출력해보세요 -->
+      <input v-model="message" placeholder="edit me" />
+      <!-- 데이터바인딩 -->
+      <p>Message is: {{ message }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          message: "", // v-model을 이용해서 연결한다.
+        },
+      });
+    </script>
+  </body>
+</html>

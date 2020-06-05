@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- v-on이라는 것은 키보드 입력, 마우스 입력에 대한 이벤트를 받는 뷰 디렉티브임  -->
+      <button v-on:click="logText">click me</button>
+      <!-- key-up은 키보드 입력을 의미   -->
+      <!-- key-up.enter에서 enter는 event modifier이다 -->
+      <!-- 공식문서를 꼭 읽어보자 -->
+      <!-- 여기서 알 수 있는 것은 add를 클릭해서 작동하는 것처럼 엔터만 처도 작동하는 것처럼 보여줄 수 있다는 것 -->
+      <input type="text" v-on:keyup.enter="logText" />
+      <button>add</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        methods: {
+          logText: function () {
+            console.log("clicked");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
